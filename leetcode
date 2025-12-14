@@ -1,6 +1,13 @@
-Write a solution to report the first name, last name, city, and state of each person in the Person table.
+1. solution to report the first name, last name, city, and state of each person in the Person table.
 If the address of a personId is not present in the Address table, report null instead.
 ==Select p.firstName,p.lastName,a.city,a.state
 from person p
 left join address a
 on p.personId=a.personId
+
+2. solution to find the employees who earn more than their managers.
+==select e.name as Employee
+From Employee e
+Join Employee m
+On e.managerId = m.id
+WHERE e.salary > m.salary;
